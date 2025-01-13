@@ -41,7 +41,6 @@ def pdf_agent(new: bool = False, user: str = "user"):
         if len(existing_run_ids) > 0:
             run_id = existing_run_ids[0]
 
-    # Use Llama-3.3-70b-Versatile from Groq
     agent = Agent(
         run_id=run_id,
         user_id=user,
@@ -60,7 +59,6 @@ def pdf_agent(new: bool = False, user: str = "user"):
     else:
         print(f"Continuing Run: {run_id}\n")
 
-    # Run the agent with a CLI interface
     agent.cli_app(markdown=True)
 
 
